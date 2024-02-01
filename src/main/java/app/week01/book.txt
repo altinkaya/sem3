@@ -1,0 +1,5 @@
+Book1, Author1, 2000, 4.5, 300
+Book2, Author2, 2005, 4.0, 350
+Book3, Author1, 2010, 4.7, 400
+Book4, Author3, 2015, 4.2, 450
+Book5, Author2, 2020, 4.8, 500
