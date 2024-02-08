@@ -73,5 +73,6 @@ public class Exercise6 {
 
     static class MegaDTO {
 
+
     }
 }
