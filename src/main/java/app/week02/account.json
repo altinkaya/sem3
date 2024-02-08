@@ -1,0 +1,92 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "birthDate": "1990-01-01",
+    "address": {
+      "street": "123 Main St",
+      "city": "Anytown",
+      "zipCode": 12345
+    },
+    "account": {
+      "id": "abc123",
+      "balance": "1000.00",
+      "isActive": true
+    }
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "birthDate": "1991-01-01",
+    "address": {
+      "street": "456 Maple St",
+      "city": "Anytown",
+      "zipCode": 12345
+    },
+    "account": {
+      "id": "def456",
+      "balance": "2000.00",
+      "isActive": false
+    }
+  },
+  {
+    "firstName": "Jim",
+    "lastName": "Smith",
+    "birthDate": "1992-01-01",
+    "address": {
+      "street": "789 Oak St",
+      "city": "Anytown",
+      "zipCode": 12345
+    },
+    "account": {
+      "id": "ghi789",
+      "balance": "3000.00",
+      "isActive": true
+    }
+  },
+  {
+    "firstName": "Jill",
+    "lastName": "Johnson",
+    "birthDate": "1993-01-01",
+    "address": {
+      "street": "321 Elm St",
+      "city": "Anytown",
+      "zipCode": 12345
+    },
+    "account": {
+      "id": "jkl012",
+      "balance": "4000.00",
+      "isActive": false
+    }
+  },
+  {
+    "firstName": "Joe",
+    "lastName": "Brown",
+    "birthDate": "1994-01-01",
+    "address": {
+      "street": "654 Pine St",
+      "city": "Anytown",
+      "zipCode": 12345
+    },
+    "account": {
+      "id": "mno345",
+      "balance": "5000.00",
+      "isActive": true
+    }
+  },
+  {
+    "firstName": "Julie",
+    "lastName": "Davis",
+    "birthDate": "1995-01-01",
+    "address": {
+      "street": "987 Birch St",
+      "city": "Anytown",
+      "zipCode": 12345
+    },
+    "account": {
+      "id": "pqr678",
+      "balance": "6000.00",
+      "isActive": false
+    }
+  }
+]
