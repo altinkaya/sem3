@@ -35,8 +35,7 @@ public class Exercise6 {
         MegaDTO megaDTO = new MegaDTO();
         for (Future<String> future : futures) {
             String response = future.get();
-            // Parse the response into a DTO and add it to the mega DTO
-            // This depends on the structure of the response and the DTOs
+
         }
 
         System.out.println(megaDTO);
@@ -73,6 +72,6 @@ public class Exercise6 {
     }
 
     static class MegaDTO {
-        // Fields for the data from the different APIs
+
     }
 }
