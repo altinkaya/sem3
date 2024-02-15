@@ -56,6 +56,7 @@ public class HibernateConfig {
     private static void getAnnotationConfiguration(Configuration configuration) {
         // add annotated classes
         // configuration.addAnnotatedClass(<YOUR ENTITY>.class);
+        configuration.addAnnotatedClass(JPALifecycle.class);
     }
 
     public static EntityManagerFactory getEntityManagerFactoryConfig() {

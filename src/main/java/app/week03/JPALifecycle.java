@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 public class JPALifecycle {
-    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("studentPU");
+    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPALifecycle");
 
     public static void main(String[] args) {
         // entity is in transient state
@@ -19,49 +19,69 @@ public class JPALifecycle {
     }
 
     public static void createStudent(Student student) {
-        try (EntityManager em = emf.createEntityManager()) {
+        EntityManager em = emf.createEntityManager();
+        try {
             em.getTransaction().begin();
             em.persist(student);
             em.getTransaction().commit();
+        } finally {
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
         }
     }
 
     public static Student readStudent(int id) {
-        Student student;
-        try (EntityManager em = emf.createEntityManager()) {
-            student = em.find(Student.class, id);
+        EntityManager em = emf.createEntityManager();
+        try {
+            return em.find(Student.class, id);
+        } finally {
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
         }
-        return student;
     }
 
     public static Student updateStudent(Student updStd) {
-        Student student;
-        try (EntityManager em = emf.createEntityManager()) {
+        EntityManager em = emf.createEntityManager();
+        try {
             em.getTransaction().begin();
-            student = em.merge(updStd);
+            Student student = em.merge(updStd);
             em.getTransaction().commit();
+            return student;
+        } finally {
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
         }
-        return student;
     }
 
     public static void deleteStudent(int id) {
-        try (EntityManager em = emf.createEntityManager()) {
+        EntityManager em = emf.createEntityManager();
+        try {
             em.getTransaction().begin();
             Student student = em.find(Student.class, id);
             if (student != null) {
                 em.remove(student);
-                em.getTransaction().commit();
+            }
+            em.getTransaction().commit();
+        } finally {
+            if (em != null && em.isOpen()) {
+                em.close();
             }
         }
     }
 
     public static List<Student> readAllStudents() {
-        List<Student> students;
-        try (EntityManager em = emf.createEntityManager()) {
+        EntityManager em = emf.createEntityManager();
+        try {
             TypedQuery<Student> query = em.createQuery("SELECT s FROM Student s", Student.class);
-            students = query.getResultList();
+            return query.getResultList();
+        } finally {
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
         }
-        return students;
     }
 
     @Data
