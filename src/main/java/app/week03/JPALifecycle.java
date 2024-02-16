@@ -13,7 +13,6 @@ public class JPALifecycle {
     private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPALifecycle");
 
     public static void main(String[] args) {
-        // entity is in transient state
         Student student = new Student("Michelle", "Schmidt", "schmidt@mail.com", 30);
         createStudent(student);
     }
