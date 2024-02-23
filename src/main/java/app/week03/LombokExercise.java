@@ -13,6 +13,10 @@ public class LombokExercise {
 
         person.setAge(26);
         System.out.println(person.getAge());
+
+
+
+        
     }
 
     @Getter

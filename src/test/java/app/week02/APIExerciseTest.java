@@ -1,6 +1,6 @@
 package app.week02;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.util.Collections;

@@ -1,5 +1,9 @@
 package app.week03;
 
+import app.week04.SchoolExercise.Populate;
+import app.week04.SchoolExercise.dao.Semester;
+import app.week04.SchoolExercise.dao.Student;
+import app.week04.SchoolExercise.dao.Teacher;
 import jakarta.persistence.EntityManagerFactory;
 import lombok.NoArgsConstructor;
 import org.hibernate.SessionFactory;
@@ -33,7 +37,6 @@ public class HibernateConfig {
             props.put("hibernate.current_session_context_class", "thread"); // hibernate current session context
             props.put("hibernate.hbm2ddl.auto", "update"); // hibernate creates tables based on entities
 
-
             return getEntityManagerFactory(configuration, props);
         } catch (Throwable ex) {
             System.err.println("Initial SessionFactory creation failed." + ex);
@@ -56,7 +59,11 @@ public class HibernateConfig {
     private static void getAnnotationConfiguration(Configuration configuration) {
         // add annotated classes
         // configuration.addAnnotatedClass(<YOUR ENTITY>.class);
-        configuration.addAnnotatedClass(JPALifecycle.class);
+        //configuration.addAnnotatedClass(JPALifecycle.class);
+        configuration.addAnnotatedClass(Populate.class);
+        configuration.addAnnotatedClass(Teacher.class);
+        configuration.addAnnotatedClass(Student.class);
+        configuration.addAnnotatedClass(Semester.class);
     }
 
     public static EntityManagerFactory getEntityManagerFactoryConfig() {
