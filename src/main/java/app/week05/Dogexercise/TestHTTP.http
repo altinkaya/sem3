@@ -1,0 +1,29 @@
+GET http://localhost:7007/api/dogs/
+###
+
+POST http://localhost:7007/api/dogs/dog
+Content-Type: application/json
+
+{
+  "id": 100,
+  "name": "Bella",
+  "breeds": "Labrador Retriever",
+  "age": 2
+}
+
+
+###
+PUT http://localhost:7007/api/dogs/dog/1
+Content-Type: application/json
+
+{
+    "id": 1,
+  "name": "Fido",
+  "breeds": "Golden Retriever",
+  "age": 3
+}
+###
+GET http://localhost:7007/api/dogs/dog/100
+###
+DELETE http://localhost:7007/api/dogs/dog/1
+

@@ -1,0 +1,15 @@
+###
+GET http://localhost:7007/api/vet/patients
+###
+
+GET http://localhost:7007/api/vet/patients/1
+
+###
+
+GET http://localhost:7007/api/vet/appointments
+
+###
+
+GET http://localhost:7007/api/vet/appointments/1
+
+###
