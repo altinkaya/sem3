@@ -1,0 +1,91 @@
+### get all hotels
+GET http://localhost:7007/api/hotels
+
+### get a specific hotel from the id
+GET http://localhost:7007/api/hotels/1
+
+### get all rooms from a specific hotel
+GET http://localhost:7007/api/hotels/1/rooms
+
+### create a new hotel
+POST http://localhost:7007/api/hotels
+Content-Type: application/json
+
+{
+  "name": "nyhotel",
+  "address": "kogensnytorv"
+}
+
+### update a hotel from a specific id with put
+PUT http://localhost:7007/api/hotels/1
+Content-Type: application/json
+
+{
+  "name": "nyhotel2",
+  "address": "kogensnytorv2"
+}
+
+### detele a hotel from a specific id
+DELETE http://localhost:7007/api/hotels/1
+
+### get all rooms
+GET http://localhost:7007/api/rooms
+
+### get a specific room from the id
+GET http://localhost:7007/api/rooms/2
+
+### create a new room in a specific hotel
+POST http://localhost:7007/api/rooms
+Content-Type: application/json
+
+{
+  "number": 2,
+  "price": 200,
+  "hotel": {
+    "id": 2
+  }
+}
+
+### update a room from a specific id with put
+PUT http://localhost:7007/api/rooms/2
+Content-Type: application/json
+
+{
+  "number": 2,
+  "price": 100
+}
+
+### deetle a room from a specific id
+DELETE http://localhost:7007/api/rooms/2
+
+### create a new user
+POST http://localhost:7007/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "user3",
+  "password": "1234"
+}
+
+### log in
+POST http://localhost:7007/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "1234"
+}
+
+### get in with Json Web Token
+POST http://localhost:7007/api/protected/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJob3RlbG9wZyIsInN1YiI6InVzZXIyIiwiZXhwIjoxNzEwNDY0MTkzLCJyb2xlcyI6IiIsInVzZXJuYW1lIjoidXNlcjIifQ.UPwtCT2Vnnuku17Frb2l9pziC6o8zGMAhZhK8j7Lgeo
+
+###
+
+POST http://localhost:7007/api/auth/addRole
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "roles": "admin"
+}
