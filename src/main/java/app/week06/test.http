@@ -58,14 +58,7 @@ Content-Type: application/json
 ### deetle a room from a specific id
 DELETE http://localhost:7007/api/rooms/2
 
-### create a new user
-POST http://localhost:7007/api/auth/register
-Content-Type: application/json
-
-{
-  "username": "user3",
-  "password": "1234"
-}
+workshop_event
 
 ### log in
 POST http://localhost:7007/api/auth/login
@@ -89,3 +82,4 @@ Content-Type: application/json
   "username": "user2",
   "roles": "admin"
 }
+###

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .mydiv {
+    width: 25px;
+    height: 25px;
+    background-color: yellow;
+    margin: 1px;
+    cursor: pointer;
+    }
+    #container {
+    width: 226px;
+    height: 274px;
+    border: 3px solid darkblue;
+    margin: auto
+    }
+    .t1, .t4 {
+    border: 1px solid black;
+    height: 48px;
+    margin-left: 3px;
+    margin-top: 3px;
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    }
+    .t1 {
+    width: 48px;
+    }
+    .t4 {
+    width: 219px;
+    }
+      </style>
+</head>
+
+<body>
+    <p id="output"></p>
+    <div id="div1">Div 1</div>
+    <div id="div2">Div 2</div>
+    <div id="div3">Div 3</div>
+    <button id="changeColorButton">Change Colors</button>
+    <div id="outer" onclick="handleClick(event)">
+    <div id="firstDiv" class="mydiv"></div>
+    <div id="secondDiv" class="mydiv"></div>
+    <div id="thirdDiv" class="mydiv"></div>
+    <div id="fourthDiv" class="mydiv"></div>
+    <div id="fifthDiv" class="mydiv"></div>
+    <div id="sixthDiv" class="mydiv"></div>
+    <div id="seventhDiv" class="mydiv"></div>
+    <div id="eighthDiv" class="mydiv"></div>
+    <div id="ninthDiv" class="mydiv"></div>
+    <div id="tenthDiv" class="mydiv"></div>
+    <div id="eleventhDiv" class="mydiv"></div>
+    <div id="twelfthDiv" class="mydiv"></div>
+    <form id="nameForm">
+        <label for="nameInput">Enter a Name:</label>
+        <input type="text" id="nameInput" name="name">
+        <button type="submit">Submit</button>
+        <button type="button" id="removeFirst">Remove First</button>
+        <button type="button" id="removeLast">Remove Last</button>
+    </form>
+    <div id="listContainer"></div>
+    <div id="tableContainer"></div>
+    <input type="number" id="priceInput" placeholder="Enter a price">
+    <button id="filterButton">Filter</button>
+    </div>
+    <div id="container">
+        <div id="display" class="t4"></div>
+        <div id="buttons">
+          <div class="t1">7</div>
+          <div class="t1">8</div>
+          <div class="t1">9</div>
+          <div class="t1">/</div>
+          <div class="t1">4</div>
+          <div class="t1">5</div>
+          <div class="t1">6</div>
+          <div class="t1">*</div>
+          <div class="t1">1</div>
+          <div class="t1">2</div>
+          <div class="t1">3</div>
+          <div class="t1">-</div>
+          <div class="t1">0</div>
+          <div class="t1">.</div>
+          <div class="t1">+</div>
+          <div id="calculate" class="t1">=</div>
+          <div id="reset" class="t1">C</div>
+      </div>
+    </div>
+    <script src ="js-day1-exercise.js"></script>
+</body>
+</html>
